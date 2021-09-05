@@ -1,21 +1,27 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue';
+// third party tools and libraries
+// local functions and variables
+// local components
+import { onMounted, onRenderTracked, onRenderTriggered } from 'vue';
+import Home from './views/Home.vue';
+
+const handler = value => {
+  console.log(value);
+};
+
+onMounted(() => {
+  console.log('App.vue mounted');
+});
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <home @sendMsg="handler" />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.fea {
+  .fe {
+    width: 10px;
+  }
 }
 </style>

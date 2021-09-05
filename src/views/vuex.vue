@@ -9,5 +9,5 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~@/css/index';
+// @import '~@/css/index';
 </style>
